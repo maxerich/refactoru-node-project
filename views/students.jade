@@ -1,0 +1,140 @@
+extends layout
+
+block content
+  #topnav-2.navbar.navbar-default.navbar-static-top(role='navigation')
+    .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a#colored-brand.navbar-brand(href='/') College Contracts
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.nav-links
+              a#colored-links(href='/students') STUDENTS
+            li.nav-links
+              a#colored-links(href='#') SPONSORS
+            li.nav-links
+              a#colored-links(href='#') WHAT WE DO
+          ul.nav.navbar-nav.navbar-right
+            li.nav-links
+              a#colored-links(href='#') Sign In
+            li.btn.btn-default.btn-xs
+              a(href='/signup') Sign Up
+  .container.students-container
+    legend
+      h1  Students 
+    .sort-students
+      h3.sort-students-words  Sort by:
+        select#state-selector.form-control.col-md-offset-1.sort-students-state(name='state-selector')
+          option State
+          option Alabama
+          option Alaska
+          option Arizona
+          option Arkansas
+          option California
+          option Colorado
+          option Connecticut
+          option Delaware
+          option Florida
+          option Georgia
+          option Hawaii
+          option Idaho
+          option Illinois
+          option Indiana
+          option Iowa
+          option Kansas
+          option Kentucky
+          option Louisiana
+          option Maine
+          option Maryland
+          option Massachusetts
+          option Michigan
+          option Minnesota
+          option Mississippi
+          option Missouri
+          option Montana
+          option Nebraska
+          option Nevada
+          option New Hampshire
+          option New Jersey
+          option New Mexico
+          option New York
+          option North Carolina
+          option North Dakota
+          option Ohio
+          option Oklahoma
+          option Oregon
+          option Pennsylvania
+          option Rhode Island
+          option South Carolina
+          option South Dakota
+          option Tennessee
+          option Texas
+          option Utah
+          option Vermont
+          option Virginia
+          option Washington
+          option West Virginia
+          option Wisconsin
+          option Wyoming
+        select#major-selector.form-control.col-md-offset-1.sort-students-state(name='major-selector')
+          option Probable Major
+          option Accounting
+          option Aerospace Engineering
+          option Agriculture
+          option Anthropology
+          option Art History
+          option Biology
+          option Business Management
+          option Chemical Engineering
+          option Chemistry
+          option Civil Engineering
+          option Communications
+          option Computer Engineering
+          option Computer Science
+          option Construction
+          option Criminal Justice
+          option Drama
+          option Economics
+          option Education
+          option Electrical Engineering
+          option English
+          option Film
+          option Finance
+          option Forestry
+          option Geography
+          option Geology
+          option Graphic Design
+          option Health Care Administration
+          option History
+          option Hospitality & Tourism
+          option Industrial Engineering
+          option Information Technology (IT)
+          option Interior Design
+          option International Relations
+          option Journalism
+          option Marketing Information Systems (MIS)
+          option Marketing
+          option Math
+          option Mechanical Engineering
+          option Music
+          option Nursing
+          option Nutrition
+          option Philosophy
+          option Physician Assistant
+          option Physics
+          option Political Science
+          option Psychology
+          option Religion
+          option Sociology
+          option Spanish
+          option Womens Studies
+          option Other
+    #profile-row.row.row-append
+
+block scripts
+  script var students = !{JSON.stringify(students)}
+  script(src="/javascripts/students.js")

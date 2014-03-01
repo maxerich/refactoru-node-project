@@ -1,0 +1,14 @@
+#new-profile
+  .col-md-4.profile-parent(data-id='{{id}}')
+      .profile-container(data-toggle='modal', data-target='#myModal')
+          img.profile-image(src='http://lorempixel.com/250/200/people/')
+          .pic-border
+            h4
+              span.profile-firstname {{name}} 
+              span.profile-lastname {{lastname}}
+            h5
+              span.profile-city {{city}}, 
+              span.profile-state {{state}}
+            h5
+              span.profile-college {{college}}
+            button.close.delete(type='button', aria-hidden='true') ×

@@ -1,0 +1,308 @@
+extends layout
+
+block content
+  #topnav-2.navbar.navbar-default.navbar-static-top(role='navigation')
+    .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a#colored-brand.navbar-brand(href='/') College Contracts
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.nav-links
+              a#colored-links(href='/students') STUDENTS
+            li.nav-links
+              a#colored-links(href='#') SPONSORS
+            li.nav-links
+              a#colored-links(href='#') WHAT WE DO
+          ul.nav.navbar-nav.navbar-right
+            li.nav-links
+              a#colored-links(href='#') Sign In
+            li.btn.btn-default.btn-xs
+              a(href='/signup') Sign Up
+  .container
+    legend
+      h2 Create Your Account
+    .row
+      form.form-horizontal(action="/student", method="post", role='form')
+        .col-md-12
+          .form-group
+            label#form-measure.col-md-2(for='firstname') First Name:
+            .col-md-8
+              input#firstname.form-control(name="name", type='name', placeholder='Enter name')
+          .form-group
+            label#form-measure.col-md-2(for='lastname') Last Name:
+            .col-md-8
+              input#lastname.form-control(name="lastname", type='lastname', placeholder='Enter last name')
+          .form-group
+            label#form-measure.col-md-2(for='DOB') Date of Birth: 
+            .controls.col-md-2
+              select#month.form-control(name='month')
+                option Month
+                option January
+                option Febuary
+                option March
+                option April
+                option May
+                option June
+                option July
+                option August
+                option September
+                option October
+                option November
+                option December
+            .controls.col-md-1
+              select#day.form-control(name='day')
+                option Day
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+                option 6
+                option 7
+                option 8
+                option 9
+                option 10
+                option 11
+                option 12
+                option 13
+                option 14
+                option 15
+                option 16
+                option 17
+                option 18
+                option 19
+                option 20
+                option 21
+                option 22
+                option 23
+                option 24
+                option 25
+                option 26
+                option 27
+                option 28
+                option 29
+                option 30
+                option 31
+            .controls.col-md-1
+              select#year.form-control(name='year')
+                option Year
+                option 1973
+                option 1974
+                option 1975
+                option 1976
+                option 1977
+                option 1978
+                option 1979
+                option 1980
+                option 1981
+                option 1982
+                option 1983
+                option 1984
+                option 1985
+                option 1984
+                option 1985
+                option 1986
+                option 1987
+                option 1988
+                option 1989
+                option 1990
+                option 1991
+                option 1992
+                option 1993
+                option 1994
+                option 1995
+                option 1996
+                option 1997
+                option 1998
+                option 1999
+                option 2000
+                option 2001
+                option 2002
+          .form-group
+            label#form-measure.col-md-2 Sex: 
+            .col-md-8
+              input#inlineCheckboxMale(name="sex-m", type='checkbox', value='Male')
+              | Male
+              input#inlineCheckboxFemale(name="sex-f", type='checkbox', value='Female')
+              | Female
+          .form-group
+            label#form-measure.col-md-2(for='city') City: 
+            .col-md-8
+              input#city.form-control(name="city", type='city', placeholder='Enter city')
+          .form-group
+            label#form-measure.col-md-2(for='state') State: 
+            .controls.col-md-3
+              select#state.form-control(name='state')
+                option
+                option Alabama
+                option Alaska
+                option Arizona
+                option Arkansas
+                option California
+                option Colorado
+                option Connecticut
+                option Delaware
+                option Florida
+                option Georgia
+                option Hawaii
+                option Idaho
+                option Illinois
+                option Indiana
+                option Iowa
+                option Kansas
+                option Kentucky
+                option Louisiana
+                option Maine
+                option Maryland
+                option Massachusetts
+                option Michigan
+                option Minnesota
+                option Mississippi
+                option Missouri
+                option Montana
+                option Nebraska
+                option Nevada
+                option New Hampshire
+                option New Jersey
+                option New Mexico
+                option New York
+                option North Carolina
+                option North Dakota
+                option Ohio
+                option Oklahoma
+                option Oregon
+                option Pennsylvania
+                option Rhode Island
+                option South Carolina
+                option South Dakota
+                option Tennessee
+                option Texas
+                option Utah
+                option Vermont
+                option Virginia
+                option Washington
+                option West Virginia
+                option Wisconsin
+                option Wyoming
+          .form-group
+            label.col-md-2(for='exampleInputFile') Image Input:
+            .col-md-9
+              input#accountimage(type='file')
+          legend Education Background
+          .form-group
+            label#form-measure.col-md-2(for='hs') High School: 
+            .col-md-8
+              input#highschool.form-control(name="highschool", type='highschool', placeholder='Enter your high school')
+          .form-group
+            label#form-measure.col-md-2(for='gpa') GPA: 
+            .col-md-8
+              input#gpa.form-control(name="gpa", type='gpa', placeholder='Enter gpa')
+          .form-group
+            label#form-measure.col-md-2(for='rank') Class Rank: 
+            .col-md-8
+              input#classrank.form-control(name="classrank", type='classrank', placeholder='Enter class ranking')
+          legend Future Education
+          .form-group
+            label#form-measure.col-md-2(for='college') College: 
+            .col-md-8
+              input#college.form-control(name="college", type='college', placeholder='Where do you plan to attend college')
+          .form-group
+            label#form-measure.col-md-2(for='major') Probable Major: 
+            .controls.col-md-3
+              select#major.form-control(name='major')
+                option
+                option Accounting
+                option Aerospace Engineering
+                option Agriculture
+                option Anthropology
+                option Art History
+                option Biology
+                option Business Management
+                option Chemical Engineering
+                option Chemistry
+                option Civil Engineering
+                option Communications
+                option Computer Engineering
+                option Computer Science
+                option Construction
+                option Criminal Justice
+                option Drama
+                option Economics
+                option Education
+                option Electrical Engineering
+                option English
+                option Film
+                option Finance
+                option Forestry
+                option Geography
+                option Geology
+                option Graphic Design
+                option Health Care Administration
+                option History
+                option Hospitality & Tourism
+                option Industrial Engineering
+                option Information Technology (IT)
+                option Interior Design
+                option International Relations
+                option Journalism
+                option Marketing Information Systems (MIS)
+                option Marketing
+                option Math
+                option Mechanical Engineering
+                option Music
+                option Nursing
+                option Nutrition
+                option Philosophy
+                option Physician Assistant
+                option Physics
+                option Political Science
+                option Psychology
+                option Religion
+                option Sociology
+                option Spanish
+                option Womens Studies
+                option Other
+          .form-group
+            label#form-measure.col-md-2(for='college') Cost: 
+            .col-md-8
+              input#cost.form-control(name="cost", type='cost', placeholder='How much money do you need to attend college')
+          legend Essay
+          .form-group
+            label#form-measure2.col-md-12(for='college') What Would You Like The Sponsors To Know About You?: 
+          textarea#essay.col-md-offset-2.col-md-8(name="essay", rows='12', placeholder='Write whatever you would like. Maybe about your plans for future or something amazing you have done.')
+          .form-group
+            input#form-submit-button.btn.btn-default.btn-lg.col-md-offset-8(type="submit")
+  hr
+  footer.footer
+    .container
+      .row
+        .col-md-6.pull-left
+          ul.list-inline
+            li 2014 College Contracts, Inc.
+            li
+              a Terms
+            li
+              a Privacy
+            li
+              a Security
+            li
+              a Contact
+        .col-md-6
+          ul.list-inline.pull-right
+            li
+              a Students
+            li
+              a Sponsors
+            li
+              a Sign In
+            li
+              a Sign Up
+            li
+              a Team
+            li
+              a About

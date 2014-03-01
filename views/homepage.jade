@@ -1,0 +1,150 @@
+extends layout
+
+block content
+  #topnav.navbar.navbar-default.navbar-static-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a#colored-brand.navbar-brand(href='/') College Contracts
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.nav-links
+              a#colored-links(href='/students') STUDENTS
+            li.nav-links
+              a#colored-links(href='#') SPONSORS
+            li.nav-links
+              a#colored-links(href='#') WHAT WE DO
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a#colored-signin.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Sign in
+                b.caret
+              ul#dropdown-menu.dropdown-menu
+                li
+                  .row
+                    .col-md-12
+                      form#login-nav.form(role='form', method='post', action='login', accept-charset='UTF-8')
+                        .form-group
+                          label.sr-only(for='exampleInputEmail2') Email address
+                          input#exampleInputEmail2.form-control(type='email', placeholder='Email address', required='required')
+                        .form-group
+                          label.sr-only(for='exampleInputPassword2') Password
+                          input#exampleInputPassword2.form-control(type='password', placeholder='Password', required='required')
+                        .checkbox
+                          label
+                            input(type='checkbox')
+                            | Remember me
+                        .form-group
+                          button.btn.btn-primary.btn-block(type='submit') Sign in
+            li#signup-btn.btn.btn-default.btn-xs
+              a(href='/signup') Sign Up
+    .body-color
+      #carousel-example-generic.carousel.slide(data-ride='carousel')
+        //
+           Indicators 
+        ol.carousel-indicators
+          li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          li(data-target='#carousel-example-generic', data-slide-to='1')
+          li(data-target='#carousel-example-generic', data-slide-to='2')
+        //
+           Wrapper for slides 
+        #carousel-inside.carousel-inner
+          .item.active
+            img.carousel-image(src='image1.jpg', alt='...')
+            .container
+              #carousel-words.carousel-caption
+                h1 College Contracts Provides Students With A New Way To Pay For College
+                h4 Sponsors Pay It Forward 
+          .item
+            img.carousel-image(src='image2.jpg', alt='...')
+            .container
+              #carousel-words.carousel-caption
+                h1 Pay It Forward With Real People and Real Relationships
+                h4 Don't Be Another Statistic To The Government Or A Bank
+          .item
+            img.carousel-image(src='image3.jpg', alt='...')
+            .container
+              #carousel-words.carousel-caption
+                h1 Graduate With No Interest On Student Loans
+                h4  Students Pay Back Only What They Can Afford
+        //
+           Controls 
+        a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+      .container
+        #row-featurette.row.featurette
+          .col-md-7
+            h1.featurette-heading Students Build A Profile
+            p.lead
+              | This profile will paint a picture of the students academic lives. The student will also post an essay where the student can talk about what they have overcome in life and/or what they dream of doing later in life. This will help sponsors gain an understanding of who they are and what these students have the ability to accomplish in the future. All information provided by the student will be verified before being put on this site.
+            a.btn.btn-info.learn-more(href='file:///Users/student/Desktop/My%20Midterm%20Project/Students.html')
+              h4 Learn More About Our Students:
+          .col-md-5
+            img.featurette-image.img-responsive(src='newmoney.png')
+        hr.featurette-divider.black
+        .row.featurette
+          .col-md-5
+            img.featurette-image.img-responsive(src='newcontract.png')
+          .col-md-7
+            h1.featurette-heading Sponsors Invest Directly in the Student
+            p.lead
+              | Sponsors can search for Students by hometown, high school, college, or future major. Sponsors invest in student's college education in exchange for a percentage of the students income, beginning after graduation for either a 5, 10, or 15 year period.
+            a.btn.btn-info.learn-more.pull-right(href='file:///Users/student/Desktop/My%20Midterm%20Project/Students.html')
+              h4 Learn How To Become A Sponsor:
+        hr.featurette-divider
+        .row.featurette
+          .col-md-7
+            h1.featurette-heading Students Graduate With No Student Loan Debt
+            p.lead Sponsors Earn On Their Investment While Helping Put A Student Through College.  
+            a.btn.btn-info.learn-more(href='file:///Users/student/Desktop/My%20Midterm%20Project/signup.html')
+              h4 Sign Up Now
+          .col-md-5
+            img.featurette-image.img-responsive(src='newgraduation.png')
+        hr.featurette-divider-2
+      section.content.email-color
+        .container
+          .row.align-right
+            .col-md-6
+              h1
+                | Want more information?
+                br
+                | Join our email list.
+            .col-md-6.align-left
+              .col-md-5
+                input#email.form-control(type='text', placeholder='Your Email Address')
+              a.btn.btn-primary Submit
+      hr
+      footer.footer
+        .container
+          .row
+            .col-md-6.pull-left
+              ul.list-inline
+                li 2014 College Contracts, Inc.
+                li
+                  a Terms
+                li
+                  a Privacy
+                li
+                  a Security
+                li
+                  a Contact
+            .col-md-6
+              ul.list-inline.pull-right
+                li
+                  a Students
+                li
+                  a Sponsors
+                li
+                  a Sign In
+                li
+                  a Sign Up
+                li
+                  a Team
+                li
+                  a About
