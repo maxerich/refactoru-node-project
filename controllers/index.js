@@ -22,8 +22,15 @@ module.exports = {
 		console.log(req.body)
 		var formData = req.body
 		var student = new studentModel(formData)
+		console.log(student)
 		student.save(function(err,doc) {
-			res.redirect("/students");
+			if(err) {
+				console.log("error not saving!", err)
+				res.send(500, "did not save")
+			}
+			else {
+				res.redirect("/students");
+			}
 		});
 		
 	},

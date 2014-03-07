@@ -27,7 +27,7 @@ block content
     legend
       h2 Create Your Account
     .row
-      form.form-horizontal(action="/student", method="post", role='form')
+      form#signup-form.form-horizontal(action="/student", method="post", role='form')
         .col-md-12
           .form-group
             label#form-measure.col-md-2(for='firstname') First Name:
@@ -306,3 +306,5 @@ block content
               a Team
             li
               a About
+block scripts
+  script(src="/javascripts/signup.js")

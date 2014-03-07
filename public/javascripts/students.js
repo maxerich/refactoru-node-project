@@ -10,4 +10,21 @@ $(document).ready(function() {
 	};
 }
 	
-})
+	$(".profile-parent").click(function() {
+		$(".modal-parent").remove()
+		$(this).closest(".profile-parent").data("id");
+		var source = $("#full-profile").html();
+		var template = Handlebars.compile(source)
+		for(var i=0; i<students.length; i++) {
+			 if (students[i].id === $(this).closest(".profile-parent").data("id")) {
+			  		$(".modal-body").append(template(students[i]))
+			  }
+			 else {
+
+			 }
+			
+		};
+
+});
+	
+});

@@ -134,6 +134,18 @@ block content
           option Womens Studies
           option Other
     #profile-row.row.row-append
+      
+      #myModal.modal.fade.modal-fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                h5 Student Profile
+              .modal-body
+              .modal-footer
+                button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Sponsor This Student
+
+
 
 block scripts
   script var students = !{JSON.stringify(students)}
