@@ -26,6 +26,7 @@ block content
   .container
     legend
       h2 Create Your Account
+    .errorset
     .row
       form#signup-form.form-horizontal(action="/student", method="post", role='form')
         .col-md-12
@@ -138,7 +139,7 @@ block content
             label#form-measure.col-md-2(for='state') State: 
             .controls.col-md-3
               select#state.form-control(name='state')
-                option
+                option Choose Your State
                 option Alabama
                 option Alaska
                 option Arizona
@@ -215,7 +216,7 @@ block content
             label#form-measure.col-md-2(for='major') Probable Major: 
             .controls.col-md-3
               select#major.form-control(name='major')
-                option
+                option Choose Your Major
                 option Accounting
                 option Aerospace Engineering
                 option Agriculture
@@ -274,7 +275,8 @@ block content
           legend Essay
           .form-group
             label#form-measure2.col-md-12(for='college') What Would You Like The Sponsors To Know About You?: 
-          textarea#essay.col-md-offset-2.col-md-8(name="essay", rows='12', placeholder='Write whatever you would like. Maybe about your plans for future or something amazing you have done.')
+            .col-md-8
+              textarea#essay.form-control(name="essay", rows='12', placeholder='Write whatever you would like. Maybe about your plans for future or something amazing you have done.')
           .form-group
             input#form-submit-button.btn.btn-default.btn-lg.col-md-offset-8(type="submit")
   hr
